@@ -1,0 +1,957 @@
+<!-- this is the website homepage-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--general stuff you don't need to know-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--title that shows up in the tab-->
+    <title>BoostNB HomePage</title>
+
+    <!-- this is linking the css files to the html file-->
+    <link rel="stylesheet" href="General-Styles/header.css" />
+    <link rel="stylesheet" href="index-styles/general.css" />
+    <link rel="stylesheet" href="General-Styles/sidebar.css" />
+    <link rel="stylesheet" href="index-styles/mainbody.css" />
+    <link rel="stylesheet" href="index-styles/indicator-highlight-boxes.css" />
+
+    <!--java script file linking-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- This is the favicon that shows up in the browser tab -->
+    <link rel="icon" type="image/ico" href="/images/favicon.ico" />
+
+    <!-- These are the Montserrat fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--back to top button-->
+    <a class="back-to-top" href="#top">Back To Top</a>
+
+    <!--header-->
+    <div class="header">
+      <!--logo section-->
+      <div class="left-section">
+        <!--Boost Logo linking to homepage when clicked-->
+        <a href="index.html"
+          ><img class="boost-logo" src="./images/logo.png" alt="BoostNB logo"
+        /></a>
+      </div>
+
+      <!--button section-->
+      <div class="right-section">
+        <div class="header-buttons">
+          <a href="index.html">Homepage</a>
+        </div>
+
+        <!--dropdown menu 'key indicators'-->
+        <div class="dropdown">
+          <button class="header-buttons">Key Indicators</button>
+          <div class="dropdown-content">
+            <a href="GDP.html">GDP</a>
+            <a href="Population.html">Population</a>
+            <a href="Trade.html">Trade</a>
+            <a href="Natural-Resources.html">Natural Resources</a>
+            <a href="Investment.html">Investment</a>
+            <a href="Labour.html">Labour</a>
+            <a href="Social-Environmental.html">Social and Environmental Welfare</a>
+          </div>
+        </div>
+
+        <!--contact us button-->
+        <div class="header-buttons">
+          <a href="ContactUs.html">Contact Us</a>
+        </div>
+
+        <!--dropdown menu 'more'-->
+        <div class="dropdown">
+          <button class="header-buttons">More</button>
+          <div class="dropdown-content">
+            <a href="AboutUs.html">About Us</a>
+            <a href="Archives.html">Archives</a>
+            <a href="Background.html">Background</a>
+            <a href="Glossary.html">Glossary</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--Header Hamburger menu-->
+    <!--this code is from a youtube tutorial https://youtu.be/EqzUcMzfV1w-->
+    <div class="menu-wrap">
+      <!--checkbox that toggles the dropdown display-->
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="GDP.html">GDP</a></li>
+             <li><a href="Population.html">Population</a></li> 
+             <li><a href="Trade.html">Trade</a></li>
+             <li><a href="Natural-Resources.html">Natural Resources</a></li>
+             <li><a href="Investment.html">Investment</a></li>
+             <li><a href="Labour.html">Labour</a></li>
+             <li><a href="Social-Environmental.html"
+                >Social and Environmental Welfare</a></li>
+              <li><a href="Background.html">Background</a></li>
+              <li><a href="AboutUs.html">About Us</a></li>
+              <li><a href="ContactUs.html">Contact Us</a></li>
+              <li><a href="Glossary.html">Glossary</a></li>
+              <li><a href="Archives.html">Archive</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--navigation bar-->
+    <div class="sidebar">
+      <div></div>
+      <a class="sidebar-buttons" href="#gdp">GDP</a>
+      <a class="sidebar-buttons" href="#population">Population</a>
+      <a class="sidebar-buttons" href="#trade">Trade</a>
+      <a class="sidebar-buttons" href="#natural-resources">Natural Resources</a>
+      <a class="sidebar-buttons" href="#investment">Investment</a>
+      <a class="sidebar-buttons" href="#labour">Labour</a>
+      <a class="sidebar-buttons" href="#social-environmental"
+        >Social and Environmental Welfare</a
+      >
+      <a class="sidebar-buttons" href="#Non-Visual">Non-Graphic Dashboard</a>
+    </div>
+
+    <!--SideBar Hamburger Menu-->
+    <!--taken from a youtube tutorial https://youtu.be/EqzUcMzfV1w-->
+    <div class="menu-wrap2">
+      <input type="checkbox" class="toggler2">
+      <div class="hamburger2"><div></div></div>
+      <div class="menu2">
+        <div>
+          <div>
+            <ul>
+              <!-- These are the menu Links -->
+             <li><a href="#gdp">GDP</a></li>
+             <li><a href="#population">Population</a></li> 
+             <li><a href="#trade">Trade</a></li>
+             <li><a href="#natural-resources">Natural Resources</a></li>
+             <li><a href="#investment">Investment</a></li>
+             <li><a href="#labour">Labour</a></li>
+             <li><a href="#social-environmental"
+              >Social and Environmental Welfare</a></li>
+              <li><a href="#Non-Visual">Non-Graphic Dashboard</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--main body-->
+
+    <!-- intro text, image, etc...-->
+    <div class="intro">
+      <!--image-->
+      <img
+        src="images/hopewellrocks.jpg"
+        alt="hopewellrocks"
+      />
+        <!--The Intro Title-->
+        <h1 >BoostNB Economic Dashboard</h1>
+        <!--The BoostNB Description in the intro-->
+        <p>
+          BoostNB is a dashboard of economic indicators that provides
+          straightforward, fact-based information about the New Brunswick economy
+          to the average New Brunswicker. This website is updated periodically by
+          post-secondary students in New Brunswick.
+        </p>
+
+      <!--photo credits-->
+      <div class="credits">Photo Credits: Peter Lloyd on Unsplash</div>
+    </div>
+
+    <div class="legend"> <h3>Legend</h3> <P>The Highlight Box Colour Indicates The Status of the Graphs Parent Report</P>
+     <p id="one">Progressing</p>  <p id="two">Progressing Not on Track</p>  <p id="three">Not Progressing</p> <p id="four">Uncertain</p>
+      
+    </div>
+    <!--goal grouping (GDP)-->
+    <div class="highlights">
+    <div class="gdp" id="gdp">
+      <!--title and below title text 'GDP'-->
+      <div class="indicator-intro">
+       <a href="GDP.html">GDP</a> (Gross Domestic Product)
+        <p>GDP Highlights Include: GDP Per Capita, Real GDP Growth, and Debt-to-GDP Ratio </p>
+      </div>
+      <!--container for the goal grouping excluding the title and text below-->
+      <div class="indicator-body">
+           <!--each box is a highlight box-->
+        <div class="highlight-box1" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Provincial GDP Per Capita</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->
+  
+              <canvas width="295px"height="225px" id="barChart"></canvas>
+                
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          Provincial gross domestic product (GDP) per capita is the sum of gross value added by the province's resident population
+          divided by mid-year population. Note that all the values are in 2012 chained dollars.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="_blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610040201"> (Table: 36-10-0402-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$40,077</div>
+              <p>NB GDP per Capita</p>
+            </div>
+            
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>	&#8595 2.96%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box2" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Real GDP Growth</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart1"></canvas>                     
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            Real GDP Growth Rate measures the economic growth, using the gross domestic product (GDP) values, from one year to
+            another, and it is adjusted for inflation. 
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="_blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610040201">
+              (Table: 36-10-0402-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>5.25%</div>
+              <p>NB Real GDP Growth</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 8.4%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box3" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Debt-to-GDP Ratio</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->           
+            <canvas width="295px" height="225px" id="myChart2"></canvas>            
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          Debt-to-GDP Ratio is the ratio between a provincial government's debt and its gross domestic product (GDP).
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: <a target="_blank" href="https://www2.gnb.ca/content/gnb/en/departments/finance/comptroller/content/public_accounts.html#2021">
+              Public Accounts of New Brunswick</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>36.0%</div>
+              <p>Debt-to-GDP Ratio</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 0.6%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+
+    <!--goal grouping-->
+    <div class="population" id="population">
+      <!--title and below title text 'population'-->
+      <div class="indicator-intro">
+       <a href="Population.html">Population</a>
+        <p>Population Highlights Include: Population Growth rates, Sources of Population Changes, and Provincial Average and Median Age </p>
+      </div>
+      <div class="indicator-body">
+        
+        <div class="highlight-box1" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Population Growth Rates</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart3"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph shows the changes in population of New Brunswick quarterly since 2002. The graph shows the population growth
+          rates for both Canada and New Brunswick.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="_blank"
+              href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000801">(Table: 17-10-0008-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>1.84%</div>
+              <p>NB Population Growth Rate</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 1.38%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box2" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Sources of Population Change</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->
+            <canvas width="295px" height="225px" id="myChart4"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          The three factors of population change taken into account for
+          this graph are natural change (number of births and deaths), net international and interprovincial migration.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="_blank"
+              href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000801">(Table: 17-10-0008-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>+6021</div>
+              <p>Total Change in Population</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 0.91%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box3" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Age by Province</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart5"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph shows the median and average age of the population in all the provinces in Canada and in Canada as a whole.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada<a target="_blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501">(Table: 17-10-0005-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>44.5 years</div>
+              <p>NB Average Age </p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 0.45%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <!--goal grouping-->
+    <div class="trade" id="trade">
+      <!--title and below title text 'Trade'-->
+      <div class="indicator-intro">
+        <a href="Trade.html">Trade</a>
+        <p>Trade Highlights Include: Trade Balances, Value of Exports and Imports, and Number of Exporting Firms  </p>
+      </div>
+      <div class="indicator-body">
+       
+        <div class="highlight-box1" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Trade Balances</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+              <canvas width="295px" height="225px" id="myChart6"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph shows New Brunswick's trade balances over time. The values are in millions of Canadian dollars (current
+          dollars). The graph shows total, provincial, and international trade balances.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada<a target="_blank"
+              href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610022201">(Table: 36-10-0222-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>-$ 6.39B</div>
+              <p>Total Trade Balance</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 2.46%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box2" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">NB value of Exports and Imports</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart7"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          Here, we look into the value of exports and imports (in 2020 constant prices) of New Brunswick since 2002. All values
+          are in billions of dollars.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="_blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610022201">(Table: 36-10-0222-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$ 22.5B</div>
+              <p>Value of Exports</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 16.0%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box3" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Number of exporting firms</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart8"></canvas>       
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph shows the number of firms participating in foreign trade since 2005. This indicator is essential to the trade
+          balance indicator.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="_blank"
+              href=" https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1210010401">(Table: 12-10-0104-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>798</div>
+              <p>Number of Exporting Firms</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 3.37%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--goal grouping-->
+    <div class="natural-resources" id="natural-resources">
+      <!--title and below title text 'Natural Resources'-->
+      <div class="indicator-intro">
+        <a href="Natural-Resources.html">Natural Resources</a>
+        <p>Natural Resource Highlights Include: Forestry, Mining and Fisheries and Agriculture </p>
+      </div>
+      <div class="indicator-body">
+       
+        <div class="highlight-box1" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Forestry</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart9"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph tries to show the performance of the forestry industries in New Brunswick. These values are the value of
+          international exports by forestry sectors (in 2012 chained dollars).
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target=._blank href=https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610040201>(Table: 36-10-0402-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$ 1.25B</div>
+              <p>Forestry Export Value</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 5.04%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box2" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Mining</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+              <canvas width="295px" height="225px" id="myChart10"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph shows the performance of the mining industries in New Brunswick. These values are the value of international
+          exports by mining sectors (in 2012 chained dollars).
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target=._blank
+              href=https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610040201>(Table: 36-10-0402-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$ 241M</div>
+              <p>Mining Export Value</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 7.69%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box3" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Fisheries and Agriculture</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->
+            <canvas width="295px" height="225px" id="myChart11"></canvas>            
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph shows the performance of the fisheries and agriculture industries in New Brunswick. These values are the
+          value of international exports by fisheries and agriculture sectors (in 2012 chained dollars).
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target=._blank
+              href=https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610040201>(Table: 36-10-0402-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$ 2.03B</div>
+              <p>Agriculture Export Value</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 47.1%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--goal grouping-->
+    <div class="investment" id="investment">
+      <!--title and below title text 'Investment'-->
+      <div class="indicator-intro">
+        <a href="Investment.html">Investment</a>
+        <p>Investment Highlights Include: R&D Per Capita, R&D Funding by Sources, and Labour Productivity </p>
+      </div>
+      <div class="indicator-body">
+        
+        <div class="highlight-box1" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">R&D Per Capita</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart12"></canvas>            
+            </div>
+          <!--description below graph-->
+          <div class="graph-description">
+          This graph shows the expenditure on research and development divided by the number of New Brunswickers. The values are
+          in 2012 constant dollars.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target=._blank href=https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2710002501> (Table: 27-10-0025-01) </a><a target=._blank href=https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501> ((Population Table: 17-10-0005-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$ 229</div>
+              <p>R&D Per Capita</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 5.37%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box2" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">R&D Funding by Sources</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+          <canvas  width="295px" height="225px" id="myChart13"></canvas>            
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            This pie chart shows the sources that fund research and development programs within the province of New Brunswick.  
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="._blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2710002501">(Table: 27-10-0025-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$187.50 Million</div>
+              <p>Total Funding by Sectors</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 4.27%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box3" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Labour Productivity</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+          <canvas  width="295px" height="225px" id="myChart14"></canvas>            
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            Labour productivity is a measure of output (Gross Domestic Product of GDP) per labour hour. The values in the graph are in 2012 chained dollars per hour.  
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="._blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610048001 ">(Table: 36-10-0480-01) </a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$49.2 </div>
+              <p>NB Labour Productivity</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 3.72%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--goal grouping-->
+    <div class="labour" id="labour">
+      <!--title and below title text 'Labour'-->
+      <div class="indicator-intro">
+        <a href="Labour.html">Labour</a>
+        <p>Labour Highlights Include: Average Weekly Wage, Labour Force Participation Rate and Post Secondary Education </p>
+      </div>
+      <div class="indicator-body">
+       
+        <div class="highlight-box1" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Average Weekly Wage</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas  width="295px" height="225px" id="myChart15"></canvas>      
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            This chart shows the growth of wages in current prices since 2002. The chart includes the average weekly wages in Canada and in New Brunswick. 
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="._blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=1410020401 ">(Table: 14-10-0204-01) </a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>$ 942.73</div>
+              <p>NB Average Weekly Wages</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 2.60%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box2" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Labour Force Participation Rate</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->
+          <canvas width="295px" height="225px" id="myChart16"></canvas>          
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            Labour Force Participation Rate is the percentage of the population that is currently working or actively seeking employment. This chart shows the rates for both Canada and New Brunswick.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="._blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410032701 ">(Table: 14-10-0327-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>78%</div>
+              <p>NB Participation Rate</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 1.3%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box3" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">PSE Attainment Rate</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff--> 
+          <canvas width="295px" height="225px" id="myChart17"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            Attainment Rate is the percentage of people with a certain level of education completed. Note, this is not a measure for the number of graduates per year more like the number of degree/diploma holders per year.  
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="._blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000501 ">(Table: 17-10-0005-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>66%</div>
+              <p>NB Attainment Rate</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8593 3%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--goal grouping-->
+    <div class="social-environmental" id="social-environmental">
+      <!--title and below title text 'Social-environmental'-->
+      <div class="indicator-intro">
+        <a href="Social-Environmental.html">Social and Environmental Welfare</a>
+        <p>Social and Environmental Welfare Highlights Include: GHG Emissions, Life Satisfaction, and Income Equality</p>
+      </div>
+      <div class="indicator-body">
+       
+        <div class="highlight-box1" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">GHC Emissions</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->            
+            <canvas width="295px" height="225px" id="myChart18"></canvas>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            Greenhouse Gases (GHG) emissions accelerates the rising global temperature. This chart shows the amount of megatonnes of Carbon Dioxide equivalent GHG were emitted by the province. 
+            <!--reference for graph info-->
+            <div class="graph-reference"><a target="._blank" href="https://data.ec.gc.ca/data/substances/monitor/canada-s-official-greenhouse-gas-inventory/B-Economic-Sector/?lang=en ">Source: National Inventory Report </a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>12.44 Mt</div>
+              <p>NB CO2e Emissions</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 5.4%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box2" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Life Satisfaction</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->
+            <canvas width="295px" height="225px" id="myChart19"></canvas>         
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+            In order to collect this data, researchers have relied primarily on self-report scales to assess happiness and life satisfaction. This chart shows life satisfaction in all Canadian provinces. 
+            <div class="graph-reference">Source: Statistics Canada <a target="._blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310009601"> (Table: 13-10-0096-01) </a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>91.3%</div>
+              <p>NB Life Satisfaction</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 0.54%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box3" >
+          <!--highlight box title-->
+          <div class="highlight-box-title">Poverty Rates</div>
+          <!--section of the highlight box for the graph-->
+          <div class="graph-container">
+            <!--JavaScript stuff-->
+            
+              <canvas width="295px" height="225px" id="myChart20"></canvas>
+            
+            <script src="charts.js"></script>
+          </div>
+          <!--description below graph-->
+          <div class="graph-description">
+           Poverty rate is percentage of peoples who are not able to afford a basic level of subsistence. This graph shows poverty rates since 2015 with 2018 as a base.
+            <!--reference for graph info-->
+            <div class="graph-reference">Source: Statistics Canada <a target="._blank" href=https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110013501>(Table: 11-10-0135-01)</a></div>
+          </div>
+          <!--highlight box footer-->
+          <div class="highlight-box-footer">
+            <!--most recent year number-->
+            <div class="current-number">
+              <div>7.6%</div>
+              <p>NB Poverty Rate</p>
+            </div>
+            <!--y/y change box-->
+            <div class="annual-change">	
+              <div>&#8595 2.3%</div>
+              <p>y/y % change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Dashboard-->
+  
+  <br>
+  <br>
+  <!-- non visual -->
+  <div id="Non-Visual" class="reports">
+    <h3>Non-Graphic Legend</h3> <P>The Font Colour Indicates The Status of Goal</P><br>
+    <p id="one" >Progressing</p><br>  <p id="two" >Progressing Not on Track</p> <br> <p id="three">Not Progressing</p> <br> <p id="four">Uncertain</p> <br> <p id="five">Not Up to Date</p>
+      <h3>Reports</h3>
+      <!-- report links -->
+      <p id="four">	 Goal 0: <a href="Archived-Reports/Goal 00 2022 - Real GDP Growth .pdf">Real GDP Growth</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="one">	 Goal 1: <a href="Archived-Reports/Goal 01 2022 - Interprovincial Migration.pdf">Interprovincial Migration</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="two">	 Goal 2: <a href="Archived-Reports/Goal 02 2022 - International Immigration.pdf">International Migration</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="five">	 Goal 3: Retention of International Students &nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p id="five">	 Goal 4: New Business Startups &nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p id="three">	 Goal 5: <a href="Archived-Reports/Goal 05 2022 - Value of Exports Goal .pdf">Value of Exports</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="three">	 Goal 6: <a href="Archived-Reports/Goal 06 2022- Firms Participating in Exports .pdf">Firms Participation in Foreign Export Trades</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="two">	 Goal 7: <a href="Archived-Reports/Goal 07 2022 - Labour Force Participation Rate.pdf">Labour Force Participation</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="three">	 Goal 8: Aboriginal and First Nations Employmnet Rates &nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p id="two">	 Goal 9: <a href="Archived-Reports/Goal 09 2022 - Youth Employment.pdf">Youth Employment</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="one">	 Goal 10: <a href="Archived-Reports/Goal 10 2022 - Post Secondary Education and Training.pdf">Post-Secondary Education and Training</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="three">	 Goal 11: <a href="Archived-Reports/Goal 11 2022 - Post Secondary Education Research and Development (1).pdf">Post-Secondary Research and Development</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="five">	 Goal 12: Research and Development Partnerships&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="five">	 Goal 13: Venture Capital &nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p id="four">	 Goal 14: <a href="Archived-Reports/Goal 14 2022 - Tourism Expansion.pdf">Tourism Expansion</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="one">	 Goal 15: <a href="Archived-Reports/Goal 15 2022 - Fisheries and Agriculture.pdf">Fisheries and Agriculture</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="three">	 Goal 16: <a href="Archived-Reports/Goal 16 2022 - Mining.pdf">Mining in New Brunswick</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="five">	 Goal 18: Municipal Stability &nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p id="one">	 Goal 19: <a href="Archived-Reports/Goal 19 2022 - Net Debt-to-GDP Ratio .pdf">Net Debt-to-GDP Ratio</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="three">	 Goal 20: <a href="Archived-Reports/Goal 20 2022 - Non-Government Employment.pdf">Non-Government Employment</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="three">	 Goal 21: <a href="Archived-Reports/goal 21  real non-residential private sector investment2019.pdf">Real Non-Residential Private Sector Investment</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="two">	 Goal 23: <a href="Archived-Reports/Goal 23 2022 - Labour Productivity.pdf">Labour Productivity</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="two">	 Goal 24: <a href="Archived-Reports/Goal 24 2022 - Forestry in New Brunswick .pdf">Forestry in New Brunswick</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p id="five">	 Goal 25: Business and Consumer Confidence *Integrated into Goal 21* &nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p id="four">	 Goal 26: <a href="Archived-Reports/Goal 26 2022 - Life Satisfaction .pdf">Life Satisfaction</a>&nbsp;&nbsp;&nbsp;&nbsp;  </p>
+      <p id="one">	 Goal 27: <a href="Archived-Reports/Goal 27 2022 - Greenhouse Gas Emissions .pdf">Greenhouse Gas Emissions</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        </p>
+      </div>
+
+    <!-- footer with socials and stuff-->
+    <div class="footer">
+      <p>Follow us on Social Media!</p>
+      <!--each social link and icon-->
+      <a target="_blank" href="https://www.instagram.com/boostnewbrunswick/"
+        ><img src="images/instagram-logo.jpeg" alt="Instagram Logo" width="50%"
+      /></a>
+      <a target="_blank" href="https://twitter.com/BoostNb"
+        ><img src="images/twitter-logo.png" alt="Twitter Logo"
+      /></a>
+      <a target="_blank" href="https://www.linkedin.com/company/boostnb/"
+        ><img src="images/linkedin-logo.png" alt="LinkedIn Logo"
+      /></a>
+      <a target="_blank" href="https://www.facebook.com/BoostNB"
+        ><img src="images/facebook-logo.jpeg" alt="Facebook Logo"
+      /></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--general stuff you don't need to know-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--title that shows up in the tab-->
+    <title>GDP</title>
+
+    <!-- this is linking the css files to the html file-->
+    <link rel="stylesheet" href="General-Styles/goalPages.css" />
+    <link rel="stylesheet" href="General-Styles/header.css" />
+    <link rel="stylesheet" href="General-Styles/sidebar.css" />
+
+    <!--java script file linking-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- This is the favicon that shows up in the browser tab -->
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+
+    <!-- These are the Montserrat fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--back to top button-->
+    <a class="back-to-top" href="#top">Back To Top</a>
+
+    <!--header-->
+    <div class="header">
+      <!--logo section-->
+      <div class="left-section">
+        <!--Boost Logo linking to homepage when clicked-->
+        <a href="index.html"
+          ><img class="boost-logo" src="images/logo.png" alt="BoostNB logo"
+        /></a>
+      </div>
+
+      <!--button section-->
+      <div class="right-section">
+        <div class="header-buttons">
+          <a href="index.html">Homepage</a>
+        </div>
+
+        <!--dropdown menu 'key indicators'-->
+        <div class="dropdown">
+          <button class="header-buttons">Key Indicators</button>
+          <div class="dropdown-content">
+            <a href="GDP.html">GDP</a>
+            <a href="Population.html">Population</a>
+            <a href="Trade.html">Trade</a>
+            <a href="Natural-Resources.html">Natural Resources</a>
+            <a href="Investment.html">Investment</a>
+            <a href="Labour.html">Labour</a>
+            <a href="Social-Environmental.html">Social and Environmental Welfare</a>
+          </div>
+        </div>
+
+        <!--contact us button-->
+        <div class="header-buttons">
+          <a href="ContactUs.html">Contact Us</a>
+        </div>
+
+        <!--dropdown menu 'more'-->
+        <div class="dropdown">
+          <button class="header-buttons">More</button>
+          <div class="dropdown-content">
+            <a href="AboutUs.html">About Us</a>
+            <a href="Archives.html">Archives</a>
+            <a href="Background.html">Background</a>
+            <a href="Glossary.html">Glossary</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--Header Hamburger menu-->
+    <!--this code is from a youtube tutorial https://youtu.be/EqzUcMzfV1w-->
+    <div class="menu-wrap">
+      <!--checkbox that toggles the dropdown display-->
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="GDP.html">GDP</a></li>
+             <li><a href="Population.html">Population</a></li> 
+             <li><a href="Trade.html">Trade</a></li>
+             <li><a href="Natural-Resources.html">Natural Resources</a></li>
+             <li><a href="Investment.html">Investment</a></li>
+             <li><a href="Labour.html">Labour</a></li>
+             <li><a href="Social-Environmental.html"
+                >Social and Environmental Welfare</a></li>
+              <li><a href="Background.html">Background</a></li>
+              <li><a href="AboutUs.html">About Us</a></li>
+              <li><a href="ContactUs.html">Contact Us</a></li>
+              <li><a href="Glossary.html">Glossary</a></li>
+              <li><a href="Archives.html">Archive</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--navigation bar-->
+    <div class="sidebar">
+      <div></div>
+      <a class="sidebar-buttons" href="#">Summary Report</a>
+      <a class="sidebar-buttons" href="#Real-GDP-Growth">Real GDP Growth</a>
+      <a class="sidebar-buttons" href="#Debt-to-GDP">Net Debt to GDP Ratio</a>
+    </div>
+
+    <!--SideBar Hamburger Menu-->
+    <!--taken from a youtube tutorial https://youtu.be/EqzUcMzfV1w-->
+    <div class="menu-wrap2">
+      <input type="checkbox" class="toggler2">
+      <div class="hamburger2"><div></div></div>
+      <div class="menu2">
+        <div>
+          <div>
+            <ul>
+              <!-- These are the menu Links -->
+             <li><a href="#">Summary Report</a></li>
+             <li><a href="#Real-GDP-Growth">Real GDP Growth</a></li> 
+             <li><a href="#Debt-to-GDP">Net Debt to GDP Ratio</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+        <h1>Key Indicator: GDP</h1>    
+    <h2>Summary Report</h2>
+        <h3>Importance</h3>
+        <p>The creation of larger GDP in New Brunswick will increase the provinces
+             tax base and allow for the provision of a higher standard of public services.
+              It will also generate more opportunities for employment and raise the incomes 
+              of New Brunswickers in turn allowing for higher levels of consumption. </p>
+        <h3>Problem</h3>
+        <p>New Brunswick has routinely displayed lower GDP Growth Rates than other provinces 
+            as well as ranking among the lowest in GDP per capita. This has many side effects 
+            which can include persistent out migration of young people, a higher reliance on 
+            federal transfers, and a lower level of provision of services by the province. 
+            New Brunswick must increase its GDP and GDP per capita to maintain the same level 
+            of services and a feasible tax base. Low GDP growth also comes with the risk that 
+            the province will not be able to service its debt, this is addressed under Debt to GDP Ratio.</p>
+        <h3>Cause</h3>
+        <p>There are many reasons for slow GDP growth in the province, identified in the goals set by BoostNB. 
+            To address this Boost has set and updated the progress on 20 goals including immigration, value of 
+            trade, labour productivity, youth unemployment and more.</p>
+        <h3>BoostNB Growth Philosophy</h3>
+        <p>GDP can be looked at from a regional growth perspective. Regional growth for the province of New Brunswick 
+            will involve a focus on the exports/base industries and the linkages they create. This can provide the groundwork 
+            for categorizing the BoostNB stretch goals for the province to work towards. Using this, categories; Growth, Base, 
+            Non-Base, Capture, and Non-Growth emerge. Below comprehensive descriptions of each will be outlined. </p>
+        <h3>Growth Goals</h3>
+        <p>Regional growth can be attributed to industries that participate in exporting and capture exporting wealth. These industries are considered 
+            to make up the “base” of the New Brunswick economy, bringing in wealth that stimulates activity. This includes our natural resources and manufacturing 
+            primarily; these are industries with international markets and competition. These major exporters are best utilized by “capturing” as much of 
+            this wealth as possible through either creating supporting industries for these large exporters or enhancing the profitability of existing industries. 
+            This “capture” has the effect of keeping export wealth within the economy. In New Brunswick, most people are employed in the “non-base” industries that 
+            produce only for the local population such as restaurants and barbers. When the base industries grow, the non-base industries grow with them to support them. 
+            For this reason, to grow the economy New Brunswick must stimulate export growth by capturing their full potential. How each of our categories fits into this model is shown below.
+
+           <br><br> &#8226;	Growth: GDP, Population <br>
+            &#8226;	Base: Natural Resources, Trade <br>
+            &#8226;	Non-Base: Labour <br>
+            &#8226;	Capture: Investment <br><br>
+            
+            For a more intuitive understanding of the flow of funds through an economy, it is useful to consult Figure 1. In this figure you can see that the only 
+            place money comes in, is through export and the only places it goes out is through imports. With this model in mind, increasing exports relative to inputs 
+            or increasing the amount of this money that stays within the province are the two ways to grow the economy. Exports can be increased by ensuring efficient 
+            production through Investment, or by locally sourcing the inputs of major exporting industries. The economy can also grow by keeping money in the circular 
+            portion of this chart for as long as possible. 
+            </p>
+        <h4>Figure 1: Flow Diagram</h4>
+        <img src="Summary-Reports-Appendix-Images/GDP Figure 1.png" alt="Regional Growth Model Chart">
+        <h3>Non-Growth Goals</h3>
+        <p>There is growing literature and debate surrounding whether growth should be the primary objective of developed economies. This is because past a certain 
+            threshold of wealth, happiness and health is no longer increased by even more wealth. Rather, to serve the happiness of the New Brunswick population 
+            and future generations it may be preferable to maintain such targets as Greenhouse Gas (GHG) Emissions or equality. Income equality is shown to have a 
+            profound effect on things such as happiness and many other key social indicators. For this reason, BoostNB has created “stretch goals” in the areas of 
+            GHG Emissions, Life Satisfaction, and Income Equality. These goals do not necessarily contribute to economic growth but instead, serve to build a stronger society.
+
+            <br><br> &#8226; Non-Growth Goals: Social and Environmental Welfare
+            </p><br>
+        <h3>In the Numbers</h3>
+        <p>New Brunswick and the other Maritime provinces have the lowest GDP per capita of all provinces in Canada as shown in Figure 2. This means that the economic 
+            activity and production of New Brunswickers is lower than other provinces. In 2021, this number equalled $40,100 (2012 Chained Dollars). This list was 
+            topped by Canada’s oil and gas provinces, followed by its most urbanized provinces with the Maritime provinces occupying the last three places. </p>
+        <h4>Figure 2: GDP Per Capita 2021 (2012 Chained Dollars)</h4>
+        <img src="Summary-Reports-Appendix-Images/GDP Figure 2.png" alt="Figure 2">
+        <p>New Brunswick also typically has low annual GDP growth rates, shown in Figure 3 on a year-to-year basis. The tendency is that New Brunswick weathers global 
+            recissions, such as the 2008 financial crisis and the Covid-19 pandemic, slightly better than the national average but benefits much less during times of 
+            recovery and in boom periods. This overall leads to New Brunswick lagging the nation. More can be found on this in Real GDP Growth.</p>
+        <h4>Figure 3: Real GDP Growth Rates</h4>
+        <img src="Summary-Reports-Appendix-Images/GDP Figure 3.png" alt="Figure 3">
+        <p>To show the weight that a lagging GDP or a growing debt is having on the economy we include a goal on the Net Debt to GDP Ratio. The primary findings are 
+            displayed in Figure 4 showing that New Brunswick is not meeting the BoostNB goal of 30% debt to GDP ratio. </p>
+        <h4>Figure 4: Debt to GDP Ratio</h4>
+        <img src="Summary-Reports-Appendix-Images/GDP Figure 4.png" alt="Figure 4">
+        <h3>Summary</h3>
+        <p>New Brunswick is not progressing at a satisfactory manner when it comes to achieving the goals relating to GDP growth. The reasons for this are on display 
+            throughout this website. To catch up to other provinces, New Brunswick will have to improve in several key areas. To see these key areas, it is useful 
+            to spend a few minutes exploring the BoostNB Dashboard for quick information on where New Brunswick is and is not performing well and where there is opportunity for change. </p>
+        <h3>Appendix</h3>
+        <h5>Appendix A: GDP per Capita by Province</h5>
+        <img class="Appendix" src="Summary-Reports-Appendix-Images/GDP Appendix A.png" alt="Appendix A">
+        <p>Source: Statistics Canada, Table 36-10-0402-01 (formerly CANSIM 379-0030) “Gross Domestic Product (GDP) at basic prices, by industry, provinces, and territories (x 1,000,000)” </p>
+        <h5>Appendix B: Annual GDP Growth Rates</h5>
+        <img class="Appendix" src="Summary-Reports-Appendix-Images/GDP Appendix B.png" alt="Appendix B">
+        <img class="Appendix" src="Summary-Reports-Appendix-Images/GDP Appendix B-2.png" alt="Appendix B">
+        <p>Source: Statistics Canada, Table 36-10-0402-01 (formerly CANSIM 379-0030) “Gross Domestic Product (GDP) at basic prices, by industry, provinces, and territories (x 1,000,000)” </p>
+        <h5>Appendix C: New Brunswick's Net Debt-to-GDP Ratio</h5>
+        <img class="Appendix" src="Summary-Reports-Appendix-Images/GDP Appendix C.png" alt="Appendix C">
+        <img class="Appendix" src="Summary-Reports-Appendix-Images/GDP Appendix C-2.png" alt="Appendix C">
+        <img class="Appendix" src="Summary-Reports-Appendix-Images/GDP Appendix C-3.png" alt="Appendix C">
+        <p>Source: Public Accounts of New Brunswick (For 2004-05: 2005 Budget). Contribution to/from Fiscal Stabilization Fund; Public Accounts of New Brunswick (for 2017-18: 2018 Budget) </p>
+    <hr>
+    <h2>Stretch Goals</h2>
+    <p><a target="_blank" href="Glossary.html">Glossary Words</a> from the following Reports: Fiscal Year, Gross Domestic Product, Net Debt-to-GDP Ratio, Real GDP, Recession</p>
+    <h3>Report: <a id="Real-GDP-Growth" href="Archived-Reports/Goal 00 2022 - Real GDP Growth .pdf">Real GDP Growth</a></h3>
+    <h3>Report: <a id="Debt-to-GDP" href="Archived-Reports/Goal 19 2022 - Net Debt-to-GDP Ratio .pdf">Net Debt to GDP Ratio</a></h3>
+    </div>
+    
+     <!-- footer with socials and stuff-->
+     <div class="footer">
+        <p>Follow us on Social Media!</p>
+        <!--each social link and icon-->
+        <a target="_blank" href="https://www.instagram.com/boostnewbrunswick/"
+          ><img src="images/instagram-logo.jpeg" alt="Instagram Logo" width="50%"
+        /></a>
+        <a target="_blank" href="https://twitter.com/BoostNb"
+          ><img src="images/twitter-logo.png" alt="Twitter Logo"
+        /></a>
+        <a target="_blank" href="https://www.linkedin.com/company/boostnb/"
+          ><img src="images/linkedin-logo.png" alt="LinkedIn Logo"
+        /></a>
+        <a target="_blank" href="https://www.facebook.com/BoostNB"
+          ><img src="images/facebook-logo.jpeg" alt="Facebook Logo"
+        /></a>
+      </div>
+
+    </body>
+    </html>

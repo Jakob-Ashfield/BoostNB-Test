@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--general stuff you don't need to know-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--title that shows up in the tab-->
+    <title>Trade</title>
+
+    <!-- this is linking the css files to the html file-->
+    <link rel="stylesheet" href="General-Styles/goalPages.css" />
+    <link rel="stylesheet" href="General-Styles/header.css" />
+    <link rel="stylesheet" href="General-Styles/sidebar.css" />
+
+    <!--java script file linking-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- This is the favicon that shows up in the browser tab -->
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+
+    <!-- These are the Montserrat fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--back to top button-->
+    <a class="back-to-top" href="#top">Back To Top</a>
+
+    <!--header-->
+    <div class="header">
+      <!--logo section-->
+      <div class="left-section">
+        <!--Boost Logo linking to homepage when clicked-->
+        <a href="index.html"
+          ><img class="boost-logo" src="images/logo.png" alt="BoostNB logo"
+        /></a>
+      </div>
+
+      <!--button section-->
+      <div class="right-section">
+        <div class="header-buttons">
+          <a href="index.html">Homepage</a>
+        </div>
+
+        <!--dropdown menu 'key indicators'-->
+        <div class="dropdown">
+          <button class="header-buttons">Key Indicators</button>
+          <div class="dropdown-content">
+            <a href="GDP.html">GDP</a>
+            <a href="Population.html">Population</a>
+            <a href="Trade.html">Trade</a>
+            <a href="Natural-Resources.html">Natural Resources</a>
+            <a href="Investment.html">Investment</a>
+            <a href="Labour.html">Labour</a>
+            <a href="Social-Environmental.html">Social and Environmental Welfare</a>
+          </div>
+        </div>
+
+        <!--contact us button-->
+        <div class="header-buttons">
+          <a href="ContactUs.html">Contact Us</a>
+        </div>
+
+        <!--dropdown menu 'more'-->
+        <div class="dropdown">
+          <button class="header-buttons">More</button>
+          <div class="dropdown-content">
+            <a href="AboutUs.html">About Us</a>
+            <a href="Archives.html">Archives</a>
+            <a href="Background.html">Background</a>
+            <a href="Glossary.html">Glossary</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--Header Hamburger menu-->
+    <!--this code is from a youtube tutorial https://youtu.be/EqzUcMzfV1w-->
+    <div class="menu-wrap">
+      <!--checkbox that toggles the dropdown display-->
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="GDP.html">GDP</a></li>
+             <li><a href="Population.html">Population</a></li> 
+             <li><a href="Trade.html">Trade</a></li>
+             <li><a href="Natural-Resources.html">Natural Resources</a></li>
+             <li><a href="Investment.html">Investment</a></li>
+             <li><a href="Labour.html">Labour</a></li>
+             <li><a href="Social-Environmental.html"
+                >Social and Environmental Welfare</a></li>
+              <li><a href="Background.html">Background</a></li>
+              <li><a href="AboutUs.html">About Us</a></li>
+              <li><a href="ContactUs.html">Contact Us</a></li>
+              <li><a href="Glossary.html">Glossary</a></li>
+              <li><a href="Archives.html">Archive</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--navigation bar-->
+    <div class="sidebar">
+      <div></div>
+      <a class="sidebar-buttons" href="#">Summary</a>
+      <a class="sidebar-buttons" href="#value">Value of Exports</a>
+      <a class="sidebar-buttons" href="#firms">Firms Participating in Foreign Export Trade</a>
+    </div>
+
+    <!--SideBar Hamburger Menu-->
+    <!--taken from a youtube tutorial https://youtu.be/EqzUcMzfV1w-->
+    <div class="menu-wrap2">
+      <input type="checkbox" class="toggler2">
+      <div class="hamburger2"><div></div></div>
+      <div class="menu2">
+        <div>
+          <div>
+            <ul>
+              <!-- These are the menu Links -->
+              <li><a href="#">Summary</a></li>
+              <li><a href="#value">Value of Exports</a></li> 
+              <li><a href="#firms">Firms Participating in Foreign Export Trade</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+        <h1>Key Indicator: Trade</h1>    
+    <h2>Summary Report</h2>
+        <h3>Importance</h3>
+        <p>The New Brunswick economy is built around exports and the further opportunities they create. 
+          By bringing in outside wealth through positive trade balances and increasing the exporting done 
+          in the province, opportunities will occur for non-exporting industries and stimulate a 
+          sustainable New Brunswick economy. To track this, BoostNB has set goals relating to Value 
+          of Exports and for the Number of Exporting Firms in the province. 
+        <br>The New Brunswick economy is built around exports and the further opportunities they create 
+         <br> Bringing in outside wealth (through positive trade balances) and increasing exporting within NB will: 
+        <br> Create opportunities for non-exporting industries  
+        <br> Stimulate a sustainable New Brunswick economy 
+        <br> To track this, BoostNB has set goals relating to Value of Exports and for the Number of Exporting Firms in the province </p>
+        <h3>Problem</h3>
+        <p>Over the past 50 years, New Brunswick has consistently had a negative trade balance. In the last 
+          ten years, New Brunswick’s trade deficit has hovered around $6 billion (Current Prices). This 
+          means that more money is leaving the New Brunswick economy through trade than entering, which 
+          can cause the province’s economy to faulter.  
+          <br> New Brunswick has consistently had a negative trade balance 
+          <br> New Brunswick’s trade deficit has hovered around $6 billion (Current Prices) over the last 10 years 
+          <br> i.e. more money is leaving the New Brunswick economy through trade than entering which can cause the economy to faulter </p>
+        <h3>Cause</h3>
+        <p>The persistence of the New Brunswick trade deficit can be attributed to multiple factors. Part of 
+          this may be due to the reduced demand for the industries the New Brunswick economy was originally 
+          built around, including lumber. The fading demand for lumber left New Brunswick with fewer 
+          industries to rely on for trade purposes. The persistent trade deficit may also be attributed 
+          to New Brunswickers’ complacency with relying on federal equalization payments. This lead to New 
+          Brunswick passing up certain growth opportunities in the knowledge that the federal program would 
+          top them up. Alternatively, one could point to the historical failure of the central government 
+          to develop the port region of Saint John, once one of the continents great harbours. It is also 
+          possible that the persistence is in part due to a failure to capture “linkages” of New Brunswick’s 
+          major exporting industries, causing the province to import some of their major inputs from elsewhere 
+          rather than through a well-integrated New Brunswick economy.  
+          <br> The New Brunswick trade deficit can be attributed to multiple factors 
+          <br> Reduced and fading demand for the industries the New Brunswick economy was originally built around reliant on (lumber) 
+          <br> New Brunswickers’ complacency with relying on federal equalization payments 
+          <br> This resulted in New Brunswick passing up certain growth opportunities in the knowledge that the federal program would top them up 
+          <br> Historical failure of the central government to develop the port region of Saint John, once one of the continents great harbours 
+          <br> A failure to capture “linkages” of New Brunswick’s major exporting industries,  
+          <br> Causing the province to import some of their major inputs from elsewhere rather than through a well-integrated New Brunswick economy. 
+           </p>
+        <h3>In the Numbers</h3>
+        <p>Figure 1 shows the growth of New Brunswick’s annual trade deficits over time. It also illustrates the 
+          shifting sources of the deficit. Through 2007, negative interprovincial trade balances made up the 
+          bulk of the total deficit, but since 2007 interprovincial deficits have shrunk while international 
+          deficits have increased dramatically. In order to attain balanced trade, New Brunswick will need to make larger strides in international markets.  </p>
+        <h4>Figure 1: New Brunswick Balance of Trade (x10,000,000)</h4>
+        <img src="" alt="">
+        <p>Figure 2 shows imports and exports for the province which have increased and decreased simultaneously 
+          tending to always move in the same direction. However, despite following a similar pattern year over year, 
+          the gap between them has grown. 
+        </p>
+        <h4>Figure 2: New Brunswick Imports and Exports</h4>
+        <img src="" alt="">
+        <p>This situation can be linked to the lack of progress in the number of Firms Participating in Foreign 
+          Trade which has not increased significantly in recent years as shown in Figure 3. New Brunswick will 
+          need to grow this number in order to reach balanced trade. </p>
+        <h4>Figure 3: Numbers of Exporting Firms</h4>
+        <img src="" alt="">
+        <p>To understand the strain that increased trade deficits might have on the economy it is useful to 
+          look at the trade deficits as a percentage of GDP. This is shown in Figure 3. In 2001 this hit a 
+          low of 6% but has now hovered around 17% for the last several years. Trade deficits like this are 
+          not likely sustainable for the New Brunswick economy.  </p>
+        <h4>Figure 4: Trade Deficit as a Percentage of GDP</h4>
+        <img src="" alt="">
+        <h3>Summary</h3>
+        <p>The New Brunswick economy is finding itself financing an increasingly burdensome trade deficit. 
+          This has come about through a massively increased international trade deficit and exporting industries 
+          that cannot keep up. Until now this has been financed through federal transfers, but to sustain strong 
+          growth New Brunswick will have to shrink this deficit to nearly zero. The settling of the trade 
+          deficit at around 17% of GDP since 2008 is an important area to improve in the New Brunswick economy.  </p>
+
+        <h3>Appendix</h3>
+        <h5>Appendix A: Balance of Trade</h5>
+        <img class="Appendix" src="" alt="">
+        <img class="Appendix" src="" alt="">
+        <img class="Appendix" src="" alt="">
+        <p>Source:  Statistics Canada. Table 36-10-0222-01. Gross domestic product, expenditure-based, provincial and territorial, annual (x 1,000,000). </p>
+        <h5>Appendix B: Trade Deficit as a Percentage of GDP</h5>
+        <img class="Appendix" src="" alt="">
+        <img class="Appendix" src="" alt="">
+        <img class="Appendix" src="" alt="">
+        <p>Source: Statistics Canada. Table 36-10-0222-01. Gross domestic product, expenditure-based, provincial and territorial, annual (x 1,000,000). </p>
+
+    <h2>Stretch Goals</h2>
+    <p><a target="_blank" href="Glossary.html">Glossary Words</a> from the following Reports: Export, Import</p>
+    
+    <h3>Report: <a id="value"href="Archived-Reports/Goal 05 2022 - Value of Exports Goal .pdf">Value of Exports</a></h3>
+    <h3> Report: <a id="firms" href="Archived-Reports/Goal 06 2022- Firms Participating in Exports .pdf">Firms Participating in Foreign Export Trade</a></h3>
+    </div>
+    
+     <!-- footer with socials and stuff-->
+     <div class="footer">
+        <p>Follow us on Social Media!</p>
+        <!--each social link and icon-->
+        <a target="_blank" href="https://www.instagram.com/boostnewbrunswick/"
+          ><img src="images/instagram-logo.jpeg" alt="Instagram Logo" width="50%"
+        /></a>
+        <a target="_blank" href="https://twitter.com/BoostNb"
+          ><img src="images/twitter-logo.png" alt="Twitter Logo"
+        /></a>
+        <a target="_blank" href="https://www.linkedin.com/company/boostnb/"
+          ><img src="images/linkedin-logo.png" alt="LinkedIn Logo"
+        /></a>
+        <a target="_blank" href="https://www.facebook.com/BoostNB"
+          ><img src="images/facebook-logo.jpeg" alt="Facebook Logo"
+        /></a>
+      </div>
+
+    </body>
+    </html>
