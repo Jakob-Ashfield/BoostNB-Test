@@ -1,0 +1,132 @@
+/* General Stuff */
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font and line height */
+body {
+  font-family: Montserrat, Arial;
+  line-height: 1.4;
+  padding-top: 80px;
+}
+
+/* removing defaults */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* removing defaults */
+li {
+  list-style: none;
+}
+/* adding white space on right and left */
+.glossary {
+  margin: 0 20vw;
+}
+/* heading formats */
+.glossary h1 {
+  font-size: 50;
+  font-weight: 500;
+  color: black;
+  margin: 2vh 0;
+  text-align: center;
+}
+
+.glossary h2 {
+  font-weight: 700;
+  scroll-margin-top: 140px;
+}
+
+.glossary h3 {
+  font-weight: 600;
+  display: inline;
+}
+
+.glossary h4 {
+  font-weight: 500;
+  display: inline;
+}
+/* paragraph format */
+.glossary p {
+  font-size: 18px;
+  margin: 2vh 0;
+}
+/* link fomrat */
+.glossary a {
+  color: rgba(72, 130, 164, 1);
+  display: inline;
+}
+/* horizontal line format */
+.glossary hr {
+  height: 4px;
+  margin: 4vh -1vw;
+  border: none;
+  background-color: rgba(72, 130, 164, 1);
+}
+
+.footer {
+  background-color: white;
+
+  height: 200px;
+  /*pushes content down 50px*/
+  padding-top: 50px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: inline-block;
+  margin-right: 2vw;
+  padding-left: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+.footer img {
+  width: 60px;
+}
+
+.footer p {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+/* back to top button styles */
+.back-to-top {
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  border: none;
+  bottom: 90px;
+  right: 30px;
+  z-index: 100;
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 7px; /* Some padding */
+  border-radius: 7px; /* Rounded corners */
+  font-size: 10px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.back-to-top:hover {
+  /*z-index is priority, higher z-index 
+    the more it is brought to front (not hidden behind other elements*/
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.back-to-top:active {
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}

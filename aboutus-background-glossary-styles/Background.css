@@ -1,0 +1,115 @@
+/* General Stuff */
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font and line height */
+body {
+  font-family: Montserrat, Arial;
+  line-height: 1.4;
+
+  padding-top: 80px;
+}
+
+/* removing defaults */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* removing defaults */
+li {
+  list-style: none;
+}
+/* horizontal line format */
+hr {
+  border: none;
+  height: 4px;
+  background-color: rgba(72, 130, 164, 1);
+  margin-bottom: 40px;
+}
+/* heading format */
+h1 {
+  font-size: 50;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  margin: 2vh 0;
+}
+/* left-right whitespace */
+.content {
+  padding: 0 7vw;
+}
+/* h2 format */
+.content h2 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1;
+
+  display: inline-block;
+}
+
+/* h3 format */
+.content h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 28px;
+  margin-left: 2vw;
+  color: rgba(72, 130, 164, 1);
+}
+/* paragraph format */
+.content p {
+  margin-bottom: 4vh;
+  margin-left: 1vw;
+  font-size: 20px;
+}
+/* link format */
+.content a {
+  color: rgba(72, 130, 164, 1);
+}
+
+/* image format */
+.content img {
+  max-width: 70vw;
+  width: 400px;
+  max-height: 150px;
+  width: min-content;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: white;
+
+  height: 200px;
+  /*pushes content down 50px*/
+  padding-top: 50px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: inline-block;
+  margin-right: 2vw;
+  padding-left: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+.footer img {
+  width: 60px;
+}
+
+.footer p {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}

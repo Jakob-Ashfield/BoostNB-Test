@@ -1,0 +1,94 @@
+/* General Stuff */
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font and line height */
+body {
+  font-family: Montserrat, Arial;
+  line-height: 1.4;
+
+  padding-top: 80px;
+}
+
+/* removing defaults */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* removing defaults */
+li {
+  list-style: none;
+}
+/* heading formatting */
+h1 {
+  font-size: 50;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  margin: 2vh 0;
+}
+/* heading 2 format */
+h2 {
+  color: rgba(72, 130, 164, 1);
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1;
+}
+/* link format */
+a {
+  color: rgba(72, 130, 164, 1);
+}
+/* paragraph format */
+p {
+  line-height: 1.4;
+  font-size: 22px;
+}
+/* Margin is 20% of the left and right*/
+.content {
+  margin: 0 20vw;
+}
+
+.footer {
+  background-color: white;
+
+  /*pushes content down 50px*/
+  padding-top: 50px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.footer a {
+  display: inline-block;
+  margin-right: 2vw;
+  padding-left: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+.footer img {
+  width: 60px;
+}
+
+.footer p {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    /* less whitespace on left and right on small screens */
+    margin: 0 12vw;
+  }
+}

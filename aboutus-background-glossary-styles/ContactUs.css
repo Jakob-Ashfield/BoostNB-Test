@@ -1,0 +1,78 @@
+/* General Stuff */
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font and line height */
+body {
+  font-family: Montserrat, Arial;
+  line-height: 1.4;
+
+  padding-top: 80px;
+}
+
+/* removing defaults */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* removing defaults */
+li {
+  list-style: none;
+}
+/* heading format */
+h1 {
+  font-size: 50;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  margin: 2vh 0;
+}
+/* link format */
+a {
+  color: rgba(72, 130, 164, 1);
+}
+/* paragraph format */
+p {
+  font-size: 20px;
+  margin: 0 20vw;
+}
+
+.content {
+  height: 60vh;
+}
+
+.footer {
+  background-color: white;
+
+  height: 20vh;
+  /*pushes content down 50px*/
+  padding-top: 50px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: inline-block;
+  margin-right: 2vw;
+  padding-left: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+.footer img {
+  width: 60px;
+}
+
+.footer p {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
