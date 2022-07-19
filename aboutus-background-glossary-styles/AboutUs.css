@@ -92,8 +92,9 @@ hr {
 
 /* Formatting Image again */
 .team .xx-team .team-member img {
-  max-width: 70vw;
+  max-width: 90vw;
   max-height: 200px;
+  width: 100%;
   justify-content: space-around;
   object-fit: contain;
   border-radius: 100%;
