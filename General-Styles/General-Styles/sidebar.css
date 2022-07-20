@@ -1,0 +1,245 @@
+/*general notes:
+If you don't understand something look up "css/html" + whatever you don't understand.
+
+search css display types to learn about display: _________. 
+As well search 'css position types to learn about position: ________.
+Position: absolute is 'stuck' within what 'relative' position on the page it is nested in, 
+e.g. intro Text is absolute and the image is relative, therefore the text is stuck somewhere relative to the image boundaries*/
+
+.sidebar {
+  background-color: rgba(72, 130, 164, 1);
+  /* allows the element to be fixed in a spot on the browser*/
+  position: fixed;
+  /* indicates where on the browser the element is placed*/
+  left: 0px;
+  top: 80px;
+  bottom: 0px;
+
+  /*width*/
+  /* Dimensions */
+  width: 150px;
+
+  /*makes it a vertical flexbox and leaves room at the bottom*/
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.sidebar-buttons {
+  /*flexbox so I can align items*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*"flex" of one, the ratio of the buttons are 1:1*/
+  flex: 1;
+
+  /*visual things for the buttons/boxes*/
+  background-color: transparent;
+  border: none;
+  /*transition time for hover or click*/
+  transition: 0.2s;
+  font-size: 18px;
+
+  font-weight: 600;
+  color: whitesmoke;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sidebar-buttons:hover {
+  /*hover effects*/
+  background-color: #3b6b86;
+  border-left: solid;
+  color: whitesmoke;
+  border-color: rgb(207, 207, 207);
+  border-width: 8px;
+}
+
+/* hides hamburger menu on screen above 920px*/
+.menu-wrap2 {
+  display: none;
+}
+
+@media screen and (max-width: 920px) {
+  /* Hide regular sidebar under 920px */
+  .sidebar {
+    display: none;
+  }
+
+  /* MENU2 STYLES */
+  /* This is from the youtube tutorial mentioned in the homepage (index) comments
+Essentially the .element-title get more and more complex because it only targets 
+nested elements (elements within an element)
+this is the sidebar hamburger menu styling code */
+
+  /* This encompasses the whole hamburger menu */
+  .menu-wrap2 {
+    /* Position stays in the browser the whole time while you scroll */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* the higher the z-index the further the item is brought to front */ /* the higher the
+     z-index the further the item is brought to front */
+    /* the higher the z-index the further the item is brought to front */
+    z-index: 1001;
+    /*just token to stop it being hidden*/
+    display: unset;
+  }
+
+  /* Targets the checkbox button which is hidden with the hamburger Icon */
+  .menu-wrap2 .toggler2 {
+    /* relative to the parent element with 'relative' position*/
+    position: absolute;
+    top: 80px;
+    left: 0;
+    /* the higher the z-index the further the item is brought to front */
+    z-index: 1002;
+    cursor: pointer;
+
+    /* Dimensions */
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .menu-wrap2 .hamburger2 {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    /* the higher the z-index the further the item is brought to front */
+    z-index: 1001;
+    /* Dimensions */
+    width: 50px;
+    height: 50px;
+
+    padding: 1rem;
+
+    background: #3b6b86;
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Creating the middle line in the icon*/
+  .menu-wrap2 .hamburger2 > div {
+    position: relative;
+    flex: none;
+    /* Dimensions */
+    width: 100%;
+    height: 2px;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap2 .hamburger2 > div::before,
+  .menu-wrap2 .hamburger2 > div::after {
+    content: "";
+    position: absolute;
+    /* the higher the z-index the further the item is brought to front */
+    z-index: 1001;
+    top: -10px;
+    /* Dimensions */
+    width: 100%;
+    height: 2px;
+
+    background: inherit;
+  }
+
+  /* Moves Botoom Line Down */
+  .menu-wrap2 .hamburger2 > div::after {
+    top: 10px;
+  }
+
+  /* Toggler Animation */
+  .menu-wrap2 .toggler2:checked + .hamburger2 > div {
+    transform: rotate(135deg);
+  }
+
+  /* Turns Lines Into X */
+  .menu-wrap2 .toggler2:checked + .hamburger2 > div:before,
+  .menu-wrap2 .toggler2:checked + .hamburger2 > div:after {
+    top: 0px;
+    transform: rotate(90deg);
+  }
+
+  /* Rotate On Hover When Checked */
+  .menu-wrap2 .toggler2:checked:hover + .hamburger2 > div {
+    transform: rotate(225deg);
+  }
+
+  /* Show the menu */
+  .menu-wrap2 .toggler2:checked ~ .menu2 {
+    visibility: visible;
+  }
+
+  .menu-wrap2 .toggler2:checked ~ .menu2 > div {
+    transform: scale(1);
+    transition-duration: 0.5s;
+  }
+
+  .menu-wrap2 .toggler2:checked ~ .menu2 > div > div {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.3s;
+  }
+
+  /* This is styling the menu that pops up */
+  .menu-wrap2 .menu2 {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+    /* Hidden initially */
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Mostly the circular animation */
+  .menu-wrap2 .menu2 > div {
+    background: black;
+    opacity: 0.8;
+    border-radius: 50%;
+    /* Dimensions */
+    width: 400vw;
+    height: 400vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.3s ease;
+  }
+
+  .menu-wrap2 .menu2 > div > div {
+    text-align: center;
+    /* Dimensionsmax- */
+    width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-wrap2 .menu2 > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 2.5vh;
+    padding: 1rem;
+  }
+  /* The text style */
+  .menu-wrap2 .menu2 > div > div > ul > li > a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+}
