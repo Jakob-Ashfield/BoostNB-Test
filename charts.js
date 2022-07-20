@@ -1,59 +1,76 @@
+//-------Graphs for GDP Highlight Boxes-----------------------
 //---------------------------------------------------Graph for GDP per Capita------------------------------------------------------
+//Below is the first line of code neccessary for the graph all you need to change is the name like barChart can be changed to another name, however make sure this matches the name in the last line of the code, and it matches the reference name in the html code 
 var context = document.getElementById("barChart").getContext("2d");
+ 
 
-//Global Options
+//Global Options: This is essentially the formatting of the graph. Like what is the font, colour, and font style. Global essentially means that all the fonts in this graph are formatted in the following way
 
 Chart.defaults.defaultFontFamily = "Montserrat";
 Chart.defaults.font.size = 12;
 Chart.defaults.color = "black";
 
+//This is essentially the dataset that will go into the x axis. Like in this case we want the GDP per capita goes into the x axis
 const xlabels = [
   72715, 65295, 58578, 50349, 50277, 44284, 43920, 40077, 39395, 38177,
 ];
-const ylabels = ["AB", "SK", "NL", "ON", "BC", "MA", "QC", "NB", "NS", "PE"];
 
-// setup
+//This is the y axis labels so in this case the provinces in Canada go in here
+const ylabels = ["AB", "SK", "NL", "ON", "BC", "MA", "QC", "NB", "NS", "PE"]; 
+//End most of the data labels/chunk of code with a semicolon. Semicolon after the bracket closing!!!
+
+// setup: Essentially this is how every graph would be setup. First you define the data itself. Here you can add the backgroundColor (which is different than borderColor which just colors the border of a graph ideal for line graphs)
+
 const data = {
-  labels: ylabels,
+  //If you star a code with an open curly bracket it must be closed with a curly bracket with all the key information within these two brackets
+  labels: ylabels, //This case is different usally in labels we would mention xlabels. This is a different case because it is a horizontal bar graph
   datasets: [
     {
-      label: "GDP Per Capita",
+      label: "GDP Per Capita", // This is essentially the label that will show up in the hover box. For example, for this graph it will show up as "GDP Per Capita: ---"
+      // This is essentially the data and the above is the label for this data
       data: xlabels,
+      //backgroundColor essentially color codes our bars. Here if you notice there are 10 colors to color our 10 bar graphs/ 10 data points.
       backgroundColor: [
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(100, 0, 0)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-      ],
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(255,165,0)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+      ]//Again important to close your brackets appropriately
     },
   ],
 };
-//config
+//Another thing to notice is that after a particular code we add commas. Notice after label: ----- there was a comma after. This is another important syntax of javascript. After a command basically don't forget a comma if you have more commands. If you do not have more commands you definitely need to add a bracket (depends on the type of bracket you opend with).
+//Types of brackets: {These are essentially the most important for commands} and [These are usually for lists]
+
+//Config is essentially important for the makeup of the graph. Like how do you want your gridlines, how you want your legend, etc. 
 const config = {
-  type: "bar", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
-  data: data,
+  type: "bar", //Here you can insert bar, line, pie, etc.
+  data: data, //Here we are calling to the data variable which we defined above in const data={}
   options: {
-    legend: {
-      display: false,
-    },
+    //Options essentially is the major part of formatting the graph
     indexAxis: "y",
+    //This is essentially the special formatting for horizontalbar graphs. You would not see this in the below graphs. IndexAxis essentially tells javascript which axis is the horizontal, and also it is very important for horinzontal bar charts.
     scales: {
+      //Scales is used for formatting the axis itself
       x: {
         ticks: {
-          autoSkip: true,
-          maxTicksLimit: 7,
-          maxRotation: 0,
+          //Ticks is essentially related to that specific axis like in this case x axis.
+          autoSkip: true, //This tells javascript to skips some data labels in the x axis, and not have every data label.
+          maxTicksLimit: 7, //This determines the number of x datalabels there will be.
+          maxRotation: 0, //This ensures that the datalabels is not rotated to optimize space
         },
         grid: {
-          display: true,
+          //Essentially for the x axis gridlines
+          display: true, //Here we are displaying the x axis gridlines
         },
         ticks: {
+          //This is used to show the $ sign before the data in the x axis. You will notice more callback commands in the below graphs used in differnt situations.
           callback: function (value, index, ticks) {
             return "$" + " " + value;
           },
@@ -61,31 +78,36 @@ const config = {
       },
       y: {
         ticks: {
-          autoSkip: false,
+          autoSkip: false, //This is to ensure the graph does not miss any y data label as we want to see all provinces' data
         },
         grid: {
-          display: false,
+          display: false, //This gets rid of the y axis gridlines
         },
       },
     },
     plugins: {
+      //This is to make changes to stuff like the hover box, and legend
       tooltip: {
-        enabled: true,
+        //Tool tip is essentially the name for the hover box that appears when you hover over a data point
+        enabled: true, //This is to ensure the hover box is displayed
         callbacks: {
+          //As mentioned there are multiple callbacks
           title: function (context) {
-            console.log(context[0].label);
-            return "Province:" + " " + context[0].label;
+            //Context is essentially the data, labels, etc. of the graph which has been defined in const data
+            console.log(context[0].label); //context[0].label is calling the labels of the graph
+            return "Province:" + " " + context[0].label; //This returns the tooltip as for example, "Province: New Brunswick"
           },
         },
       },
       legend: {
-        display: false,
-      },
-    },
-  },
+        display: false, //display is a command for the legend itself and here we are not displaying a legend.
+      } //Notice all the curly brackets this is to close all the yet open curly brackets
+    }
+  }
 };
 
-//render init block
+//render init block. This is essentially the part where the script paints the picture of our graph. Ensure the config is the config of the above graph. To ensure the variables do not repeat I have used config1, config2,.... simialrly I used data1, data2.... in the below graphs. 
+// After const I usually put the name I used in the first line. You will notice the same in the below graphs. 
 const barChart = new Chart(
   document.getElementById("barChart").getContext("2d"),
   config
@@ -121,16 +143,16 @@ const data1 = {
     {
       label: "New Brunswick",
       data: ylabels1,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1,
     },
     {
       label: "Canada",
       data: ylabels3,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 1,
     },
@@ -142,6 +164,7 @@ const config1 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data1,
   options: {
+    tension: 0.1,
     legend: {
       display: false,
     },
@@ -208,7 +231,7 @@ const myChart1 = new Chart(
   config1
 );
 
-// -----------------------------------------------Graph of Debt-to-GDP Ratio----------------------------------------------------------------------
+// -----------------------------------------------Graph of Debt-to-GDP ratio---------------------------------------------------------------------
 var context = document.getElementById("myChart2").getContext("2d");
 
 //Global Options
@@ -237,16 +260,16 @@ const data2 = {
     {
       label: "Debt-to-GDP Ratio",
       data: ylabels4,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1,
     },
     {
       label: "Goal",
       data: ylabels5,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 0,
       borderDash: [10, 5],
@@ -259,6 +282,7 @@ const config2 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data2,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -322,6 +346,7 @@ const myChart2 = new Chart(
   config2
 );
 
+//Graphs for Population Highlightboxes
 // -----------------------------------------------Population Graph 1---------------------------------------------------------------------------
 var context = document.getElementById("myChart3").getContext("2d");
 
@@ -366,18 +391,18 @@ const data3 = {
     {
       label: "Canada",
       data: ylabels6,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
-      pointRadius: 0,
+      pointRadius: 1,
     },
     {
       label: "New Brunswick",
       data: ylabels7,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
-      pointRadius: 0,
+      pointRadius: 1,
     },
   ],
 };
@@ -387,6 +412,7 @@ const config3 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data3,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -484,24 +510,24 @@ const data4 = {
     {
       label: "Natural Change",
       data: ylabels8,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
-      pointRadius: 0.25,
+      pointRadius: 1,
     },
     {
       label: "Net International Migration",
       data: ylabels9,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
-      pointRadius: 0.25,
+      pointRadius: 1,
     },
     {
       label: "Net Interprovincial Migration",
       data: ylabels10,
-      borderColor: "rgb(0, 0, 100)",
-      backgroundColor: "rgb(0, 0, 100)",
+      borderColor: "#004D40",
+      backgroundColor: "#004D40",
       borderWidth: 3,
       pointRadius: 0.25,
     },
@@ -513,6 +539,7 @@ const config4 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data4,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -614,12 +641,12 @@ const data5 = {
     {
       label: "Median Age",
       data: ylabels11,
-      backgroundColor: "rgb(45, 73, 36)",
+      backgroundColor: "rgb(255,165,0)",
     },
     {
       label: "Average Age",
       data: ylabels12,
-      backgroundColor: "rgb(100, 0, 0)",
+      backgroundColor: "rgb(0, 150, 255)",
     },
   ],
 };
@@ -687,7 +714,7 @@ const myChart5 = new Chart(
   document.getElementById("myChart5").getContext("2d"),
   config5
 );
-
+//Graphs for Trade Highlightboxes
 // -----------------------------------------------Trade Balance Graph---------------------------------------------------------------------------
 var context = document.getElementById("myChart6").getContext("2d");
 
@@ -722,17 +749,17 @@ const data6 = {
     {
       label: "Total",
       data: ylabels13,
-      backgroundColor: "rgb(45, 73, 36)",
+      backgroundColor: "rgb(0, 150, 255)",
     },
     {
       label: "Provincial",
       data: ylabels14,
-      backgroundColor: "rgb(100, 0, 0)",
+      backgroundColor: "rgb(255,165,0)",
     },
     {
       label: "International",
       data: ylabels15,
-      backgroundColor: "rgb(0, 0, 100)",
+      backgroundColor: "#004D40",
     },
   ],
 };
@@ -831,16 +858,16 @@ const data7 = {
     {
       label: "Exports",
       data: ylabels16,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "Imports",
       data: ylabels17,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100,0,0)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -852,6 +879,7 @@ const config7 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data7,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -940,8 +968,8 @@ const data8 = {
     {
       label: "Number of Firms Exporting",
       data: ylabels18,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -953,6 +981,7 @@ const config8 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data8,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1011,6 +1040,7 @@ const myChart8 = new Chart(
   document.getElementById("myChart8").getContext("2d"),
   config8
 );
+//Graphs for Natural Resources Highlightboxes
 // -----------------------------------------------Forestry---------------------------------------------------------------------------
 var context = document.getElementById("myChart9").getContext("2d");
 
@@ -1037,8 +1067,8 @@ const data9 = {
     {
       label: "Total International Export Value",
       data: ylabels19,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -1050,6 +1080,7 @@ const config9 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data9,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1145,8 +1176,8 @@ const data10 = {
     {
       label: "Total International Export Value",
       data: ylabels20,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -1158,6 +1189,7 @@ const config10 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data10,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1253,8 +1285,8 @@ const data11 = {
     {
       label: "Total International Export Value",
       data: ylabels21,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -1266,6 +1298,7 @@ const config11 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data11,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1334,7 +1367,7 @@ const myChart11 = new Chart(
   document.getElementById("myChart11").getContext("2d"),
   config11
 );
-
+//Graphs for  Highlightboxes
 //-------------------------------------------R&D Expedentiture----------------------------------------------------------------------
 var context = document.getElementById("myChart12").getContext("2d");
 
@@ -1369,17 +1402,17 @@ const data12 = {
       data: ylabels22,
       borderColor: "rgb(45, 73, 36)",
       backgroundColor: [
-        "rgb(0, 0, 100)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(100, 0, 0)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
+        "#004D40",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(255,165,0)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
       ],
       borderWidth: 0,
       pointRadius: 1.0,
@@ -1460,7 +1493,7 @@ const myChart12 = new Chart(
   config12
 );
 
-//-------------------------------------------R&D Expedentiture Funding by Sources----------------------------------------------------------------------
+//-----------------------------------------R&D Expedentiture Funding by Sources------------------------------------------------------------------
 var context = document.getElementById("myChart13").getContext("2d");
 context.width = 50;
 context.height = 50;
@@ -1492,10 +1525,10 @@ const data13 = {
       label: "Total R&D Expenditure Per Capita ",
       data: ylabels23,
       backgroundColor: [
-        "rgb(45,73, 36)",
-        "rgb(100,0, 0)",
+        "rgb(255,165,0)",
+        "rgb(0, 150, 255)",
         "rgb(0, 0, 0)",
-        "rgb(62, 35, 135)",
+        "#004D40",
         "rgb(30, 75, 117)",
         "rgb(115, 45, 77)",
       ],
@@ -1534,7 +1567,7 @@ const myChart13 = new Chart(
   document.getElementById("myChart13").getContext("2d"),
   config13
 );
-//-----------------------------------------------Labour Productivity Graph---------------------------------------------------------------------------
+//---------------------------------------------Labour Productivity Graph-------------------------------------------------------------------------
 var context = document.getElementById("myChart14").getContext("2d");
 
 //Global Options
@@ -1568,24 +1601,24 @@ const data14 = {
     {
       label: "Canada",
       data: ylabels24,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "New Brunswick",
       data: ylabels25,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "Nova Scotia",
       data: ylabels26,
-      borderColor: "rgb(0, 0, 100)",
-      backgroundColor: "rgb(0, 0, 100)",
+      borderColor: "#004D40",
+      backgroundColor: "#004D40",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -1597,6 +1630,7 @@ const config14 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data14,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1659,6 +1693,7 @@ const myChart14 = new Chart(
   config14
 );
 
+//Graphs for Labour Highlightboxes
 //-----------------------------------------------Average Weekly Graph---------------------------------------------------------------------------
 var context = document.getElementById("myChart15").getContext("2d");
 
@@ -1689,16 +1724,16 @@ const data15 = {
     {
       label: "Canada",
       data: ylabels27,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "New Brunswick",
       data: ylabels28,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -1710,6 +1745,7 @@ const config15 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data15,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1771,7 +1807,7 @@ const myChart15 = new Chart(
   document.getElementById("myChart15").getContext("2d"),
   config15
 );
-//-----------------------------------------------Labour Force Production Rate Graph---------------------------------------------------------------------------
+//-------------------------------------------Labour Force Production Rate Graph-----------------------------------------------------------------
 var context = document.getElementById("myChart16").getContext("2d");
 
 //Global Options
@@ -1800,16 +1836,16 @@ const data16 = {
     {
       label: "Canada",
       data: ylabels29,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "New Brunswick",
       data: ylabels30,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -1821,6 +1857,7 @@ const config16 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data16,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1883,7 +1920,7 @@ const myChart16 = new Chart(
   config16
 );
 
-//-----------------------------------------------Post Secondary Education Attainment Rate Graph---------------------------------------------------------------------------
+//--------------------------------------Post Secondary Education Attainment Rate Graph----------------------------------------------------------
 var context = document.getElementById("myChart17").getContext("2d");
 
 //Global Options
@@ -1905,16 +1942,16 @@ const data17 = {
     {
       label: "Canada",
       data: ylabels31,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "New Brunswick",
       data: ylabels32,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -1926,6 +1963,7 @@ const config17 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data17,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -1988,6 +2026,7 @@ const myChart17 = new Chart(
   config17
 );
 
+//Graphs for Social and Environmental Welfare Highlightboxes
 //-----------------------------------------------GHC Emissions Graph---------------------------------------------------------------------------
 var context = document.getElementById("myChart18").getContext("2d");
 
@@ -2013,8 +2052,8 @@ const data18 = {
     {
       label: "NB Inventory Total (Mt CO2 eq)",
       data: ylabels33,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -2026,6 +2065,7 @@ const config18 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data18,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {
@@ -2128,17 +2168,17 @@ const data19 = {
       label: "Percentage of Satisfied People",
       data: ylabels34,
       backgroundColor: [
-        "rgb(0, 0, 100)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(100, 0, 0)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
-        "rgb(45, 73, 36)",
+        "#004D40",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(255,165,0)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
+        "rgb(0, 150, 255)",
       ],
     },
   ],
@@ -2249,24 +2289,24 @@ const data20 = {
     {
       label: "Canada",
       data: ylabels35,
-      borderColor: "rgb(45, 73, 36)",
-      backgroundColor: "rgb(45, 73, 36)",
+      borderColor: "rgb(0, 150, 255)",
+      backgroundColor: "rgb(0, 150, 255)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "New Brunswick",
       data: ylabels36,
-      borderColor: "rgb(100, 0, 0)",
-      backgroundColor: "rgb(100, 0, 0)",
+      borderColor: "rgb(255,165,0)",
+      backgroundColor: "rgb(255,165,0)",
       borderWidth: 3,
       pointRadius: 1.0,
     },
     {
       label: "Nova Scotia",
       data: ylabels37,
-      borderColor: "rgb(0,0,100)",
-      backgroundColor: "rgb(0,0,100)",
+      borderColor: "#004D40",
+      backgroundColor: "#004D40",
       borderWidth: 3,
       pointRadius: 1.0,
     },
@@ -2278,6 +2318,7 @@ const config20 = {
   type: "line", //bar, horizonatlBar, pie, line, doughnout, rada, polarArea
   data: data20,
   options: {
+    tension: 0.15,
     scales: {
       x: {
         ticks: {

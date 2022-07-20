@@ -1,0 +1,255 @@
+/* General Stuff */
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, Arial;
+}
+
+/* font and line height */
+body {
+  line-height: 1.4;
+
+  padding-top: 80px;
+  padding-left: 150px;
+  background-color: white;
+}
+
+.intro {
+  /*picture and overlay text*/
+  background-color: black;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+/*This is the image*/
+.intro img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  opacity: 0.5;
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+/*text that says BoostNB Dashboard*/
+.intro h1 {
+  display: block;
+  position: absolute;
+  /*position within the image*/
+  top: 100px;
+  left: 75px;
+  /*text colour*/
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.intro p {
+  display: block;
+  position: absolute;
+  /*position within the image*/
+  top: 200px;
+  left: 10%;
+  /*text colour*/
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 24px;
+}
+
+/* removing defaults */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* removing defaults */
+li {
+  list-style: none;
+}
+
+.content hr {
+  border: none;
+  height: 4px;
+  background-color: rgba(72, 130, 164, 1);
+  margin-bottom: 40px;
+}
+/* white space */
+.content {
+  margin: 0 10vw;
+}
+
+.content ul li {
+  list-style-type: square;
+}
+.content ol li {
+  list-style-type: upper-roman;
+}
+/* heading format */
+.content h1 {
+  font-size: 50;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  margin: 2vh 0;
+  padding-left: 15px;
+}
+
+.content h2 {
+  color: rgba(72, 130, 164, 1);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1;
+  margin-left: -2vw;
+}
+
+.content h4 {
+  font-weight: 400;
+  font-size: 24;
+}
+/* link format */
+.content a {
+  text-decoration: none;
+  color: rgba(72, 130, 164, 1);
+  scroll-margin-top: 180px;
+}
+/* image format */
+.content img {
+  max-width: 80vw;
+  width: 500px;
+  max-height: 400px;
+  display: block;
+  margin: auto;
+}
+/* appendix format */
+.content .Appendix {
+  max-height: 200px;
+  min-height: 150px;
+  width: fit-content;
+  display: inline;
+  max-width: 350px;
+}
+
+.back-to-top {
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  border: none;
+  bottom: 90px;
+  right: 30px;
+  z-index: 100;
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 7px; /* Some padding */
+  border-radius: 7px; /* Rounded corners */
+  font-size: 10px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.back-to-top:hover {
+  /*z-index is priority, higher z-index 
+    the more it is brought to front (not hidden behind other elements*/
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.back-to-top:active {
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  background-color: white;
+
+  height: 200px;
+  /*pushes content down 50px*/
+  padding-top: 50px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: inline-block;
+  margin-right: 2vw;
+  padding-left: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+.footer img {
+  width: 60px;
+}
+
+.footer p {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+@media screen and (max-width: 1280px) {
+  /* adjusting things for different screen widths */
+  .intro h1 {
+    /*position within the image*/
+    top: 75px;
+    left: 45px;
+    font-size: 42px;
+  }
+
+  .intro p {
+    /*position within the image*/
+    top: 150px;
+    left: 10%;
+    /*text colour*/
+    grid-template-columns: 2fr 1fr;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 920px) {
+  /* removing some whitespace when sidebar disappears */
+  body {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /*text that says BoostNB Dashboard*/
+  .intro h1 {
+    top: 60px;
+    left: 25px;
+    font-size: 36px;
+  }
+
+  .intro p {
+    grid-template-columns: 8fr 1fr;
+    font-size: 18px;
+    line-height: 110%;
+    top: 200px;
+    left: 5vw;
+  }
+}
+
+.chart {
+  width: 700px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.picture {
+  display: block;
+  margin: auto;
+}

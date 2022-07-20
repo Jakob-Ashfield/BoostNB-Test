@@ -141,29 +141,39 @@
         </div>
       </div>
     </div>
-
+    <div class="intro">
+      <!--image-->
+      <img
+        src="images/hopewellrocks.jpg"
+        alt="hopewellrocks"
+      />
+        <!--The Intro Title-->
+      <h1>Key Indicator: Population</h1>  
+      <p>Population: all the inhabitants of a particular town, area, or country.</p> 
+      </div> 
     <div class="content">
-        <h1>Key Indicator: Population</h1>    
     <h2>Summary Report</h2>
     <h3>Importance</h3>
-    <p>Growing New Brunswick’s population base is key to improving its economy, developing its 
-        communities, meeting its employment needs, and correcting its population demographics. 
-        Increasing the population will stimulate economic development and attract private sector 
-        investment. This can be done through international immigration, interprovincial immigration, 
-        or increased birth rates relative to mortality rates.</p>
+    <p><ul><li>Growing Niw Brunswick's population base is key to: 
+      <ul><li>Improvng the economy</li><li>Developing communities</li><li>Meeting employment needs</li><li>Correcting population demographics</li></ul></li>
+    <li>Increasing the population will stimulate economic development and attract private sector investment </li>
+    <li>This can be done through international immigration, interprovincial immigration, or increased birth rates relative to mortality rates </li>
+    </ul></p>
     <h3>Problem</h3> 
-    <p>New Brunswick’s population share is shrinking due to an aging population and poor retention 
-        of youth and immigrants. In 1976, New Brunswick’s population share peaked at 2.94%; however, 
-        it has since dropped by 30%, reaching 2.06% in 2021. Annual growth that matched the national 
-        rate would maintain New Brunswick’s population share and boost its economy. </p>
+    <p>
+    <ul><li>New Brunswick’s population share is shrinking due to an aging population and poor retention of youth and immigrants </li>
+    <li>In 1976, New Brunswick’s population share peaked at 2.94%; however, it has since dropped by 30%, reaching 2.06% in 2021 </li>
+    <li>Annual growth that matched the national rate would maintain NB’s population share and boost its economy </li></ul>  
+    </p>
     <h3>Cause</h3>
-    <p>New Brunswick’s low population growth rate can be seen as the result of several factors. 
-        First is an imbalance between the aging population and youth population. 
-        Low fertility rates – too few births – have caused New Brunswick’s death rates to 
-        exceed its birth rates every year since 2015. Youth leaving New Brunswick in search of 
-        employment has also put negative pressure on the province’s population share. These factors 
-        can be offset by net positive migration and attracting young people to the province. This is 
-        broken down further in BoostNB’s goals on Interprovincial Migration and International Migration.  </p>
+    <p><ul>
+    <li>New Brunswick’s low population growth rate can be seen as the result of several factors
+      <ol><li>An imbalance between the aging population and youth population </li>
+        <li>Low fertility rates – too few births – have caused New Brunswick’s death rates to exceed its birth rates every year since 2015</li>
+        <li>Youth leaving New Brunswick in search of employment has also put negative pressure on the province’s population share </li></ol></li>
+    <li>These factors can be offset by net positive migration and attracting young people to the province </li>
+    <li>See BoostNB’s goals on <a href="Archived-Reports/Goal 01 2022 - Interprovincial Migration.pdf">Interprovincial Migration</a> 
+      and <a href="Archived-Reports/Goal 02 2022 - International Immigration.pdf">International Immigration</a> </li></ul>  </p>
     <h3>In The Numbers</h3>
     <p>Over the past 50 years New Brunswick has not been keeping up with the national population growth rates, 
         leading to a shrinking population share and an aging demographic putting stress on the New Brunswick 
@@ -173,7 +183,9 @@
         and low international immigration in the nation as a whole. It is not clear if this should be 
         expected to be immediately repeatable.  </p>
     <h4>Figure 1: Population Growth Rates</h4>
-    <img src="Summary-Reports-Appendix-Images/Pop Figure 1.png" alt="Figure 1">
+    <div class="chart">
+      <canvas id="myChart3"></canvas>
+    </div>
     <h3>Sources of Growth</h3>
     <p>Historically, most of New Brunswick’s population growth came from natural increase – birth rates 
         exceeding mortality rates. However, with an increasingly aging demographic and decreasing fertility 
@@ -181,8 +193,10 @@
         negative since 2015. This demographic problem can only be corrected by immigration of young people. 
         Since 2014, immigration both international and interprovincial has been increasing but has not yet 
         been able to consistently match the national rates of population growth. </p>
-    <h4>Figure 2: Sources of Population Change</h4>
-    <img src="/Summary-Reports-Appendix-Images/Pop Figure 2.png" alt="Figure 2">
+    <h4>Figure 2: Sources of Population Change</h4>    
+    <div class="chart">
+      <canvas id="myChart4"></canvas>
+    </div>
     <h3>Natural Change</h3>
     <p>Due to the aging population and outmigration of young people from New Brunswick, there is a clear 
         and consistent decline in the natural increase, which is births minus deaths in the provinces. 
@@ -191,7 +205,10 @@
         province through migration. In 2015 the death rate exceeded the birth rate for the first time, 
         leading to a natural decrease.  </p>
     <h4>Figure 3: Components of Natural Change</h4>
-    <img src="Summary-Reports-Appendix-Images/Pop Figure 3.png" alt="Figure 3">
+    <div class="chart">
+      <canvas id="myChart5"></canvas>
+      <script src="PopulationSummary.js"></script>
+    </div>
     <h3>Summary</h3>
     <p>New Brunswick’s population share is declining due to an aging population and poor retention of 
         its younger population. Increasing the province's population share could stimulate economic growth. 
@@ -205,7 +222,15 @@
    <br><br> The attracting and retaining of skilled young people will be vital to New Brunswick’s economic growth going forward, 
    this will have an immediate impact not only on population but also on natural growth rates which have been falling for at 
    least a half century. </p>
-    <!--Appendix-->
+    
+   <hr>
+    <h2>Stretch Goals</h2>
+    <p><a target="_blank" href="Glossary.html">Glossary Words</a> from the following Reports: </p>
+   <h3>Report: <a id="interprovincial" href="Archived-Reports/Goal 01 2022 - Interprovincial Migration.pdf">Interprovincial Migration</a></h3>
+   <h3>Report: <a id="international" href="Archived-Reports/Goal 02 2022 - International Immigration.pdf">International Immigration</a></h3>
+    
+   <br><br><hr>
+  <!--Appendix-->
     <h3>Appendix</h3>
     <h5>Appendix A: Population Growth Rate</h5>
     <img class="Appendix" src="Summary-Reports-Appendix-Images/Pop Appendix A.png" alt="Appendix A">
@@ -217,11 +242,7 @@
     <img class="Appendix" src="Summary-Reports-Appendix-Images/Pop Appendix B-3.png" alt="">
     <p>Source: Statistics Canada. Table 17-10-0008-01  Estimates of the components of demographic growth, annual. DOI: https://doi.org/10.25318/1710000801-eng </p>
 
-    <h2>Stretch Goals</h2>
-    <p><a target="_blank" href="Glossary.html">Glossary Words</a> from the following Reports: </p>
-   <h3>Report: <a id="interprovincial" href="Archived-Reports/Goal 01 2022 - Interprovincial Migration.pdf">Interprovincial Migration</a></h3>
-   <h3>Report: <a id="international" href="Archived-Reports/Goal 02 2022 - International Immigration.pdf">International Immigration</a></h3>
-    </div>
+  </div>
     
      <!-- footer with socials and stuff-->
      <div class="footer">

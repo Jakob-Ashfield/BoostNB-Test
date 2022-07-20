@@ -1,0 +1,237 @@
+/*general notes:
+If you don't understand something look up "css/html" + whatever you don't understand.
+
+search css display types to learn about display: _________. 
+As well search 'css position types to learn about position: ________.
+Position: absolute is 'stuck' within what 'relative' position on the page it is nested in, 
+e.g. intro Text is absolute and the image is relative, therefore the text is stuck somewhere relative to the image boundaries*/
+
+.indicator-intro {
+  padding-left: 20px;
+
+  font-size: 42px;
+  font-weight: 600;
+
+  /*the border to the left of the indicator title*/
+  border: none;
+  border-left: solid;
+  border-width: 10px;
+
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
+
+.indicator-intro p {
+  /*the intro description below the title*/
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 40px;
+  padding-top: 5px;
+}
+
+.indicator-intro a {
+  color: inherit;
+}
+
+.indicator-body {
+  /*dives the body into three section (the boxes)*/
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+}
+
+.highlight-box1,
+.highlight-box2,
+.highlight-box3 {
+  /*formatting the three boxes*/
+  margin-right: 1vw;
+  /*making more boxes within the boxes
+  'fr' is  free room. for this one I divided it in 10, 
+  so 4fr takes up 4/10ths of the free space in the box*/
+  display: grid;
+  grid-template-rows: 0.5fr 5fr 3fr 1.5fr;
+  width: 340px;
+  transition: 0.3s;
+  min-height: 560px;
+  box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.282);
+
+  /*the background colour comes from the mainbody.css file under each key indicator*/
+  background-color: inherit;
+  /*rounds edges*/
+  border-radius: 25px;
+}
+
+.highlight-box-title {
+  /*The title of the graph*/
+  color: whitesmoke;
+  text-align: center;
+}
+
+.graph-container {
+  /*the contents of the boxes*/
+  padding-top: 10px;
+  padding-right: 5px;
+  width: min-content;
+  background-color: whitesmoke;
+
+  margin: 0 auto;
+}
+
+.graph-description {
+  /*space below th:e graph to describe it*/
+  padding: 0 20px;
+  background-color: whitesmoke;
+  position: relative;
+  color: rgb(85, 85, 85);
+  font-size: 14px;
+  margin-top: 20px;
+  padding-top: 2px;
+}
+
+.graph-reference {
+  /*reference for the graph*/
+  font-weight: 300;
+  font-size: 12px;
+  padding: 10px 20px;
+
+  color: rgb(85, 85, 85);
+  background-color: whitesmoke;
+
+  position: absolute;
+  /*position within the graph description box*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+}
+
+.highlight-box-footer {
+  /*footer*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.current-number,
+.annual-change {
+  /*two boxes in the footers*/
+  color: whitesmoke;
+  /*flexbox like grid but flexible*/
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  margin-bottom: -20px;
+}
+
+.current-number p,
+.annual-change p {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1280px) {
+  .indicator-intro {
+    padding-left: 20px;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    /*the border to the left of the indicator title*/
+    border: none;
+    border-left: solid;
+    border-width: 10px;
+
+    margin-bottom: 10px;
+    margin-right: 30px;
+    /* keeps the indicator intro on the left */
+    align-self: flex-start;
+  }
+
+  .indicator-intro p {
+    /*the intro description below the title*/
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 40px;
+    padding-top: 5px;
+  }
+
+  .indicator-body {
+    /*dives the body into three section (the boxes)*/
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5em;
+  }
+  .highlight-box1,
+  .highlight-box2,
+  .highlight-box3 {
+    margin-right: 2em;
+    width: 300px;
+    transition: 0.3s;
+  }
+
+  .graph-description {
+    font-size: 13px;
+  }
+  .graph-description {
+    margin-top: 2px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .indicator-intro {
+    padding-left: 20px;
+
+    line-height: normal;
+    font-size: 28px;
+    font-weight: 600;
+
+    /*the border to the left of the indicator title*/
+    border: none;
+    border-left: solid;
+    border-width: 10px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    align-self: flex-start;
+  }
+
+  .indicator-intro p {
+    /*the intro description below the title*/
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 20px;
+  }
+  .indicator-body {
+    /*dives the body into three section (the boxes)*/
+    display: grid;
+
+    grid-template-columns: 1fr;
+    row-gap: 3em;
+  }
+
+  .highlight-box1,
+  .highlight-box2,
+  .highlight-box3 {
+    margin-right: 0;
+    width: 300px;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (min-width: 1750px) {
+  .highlight-box1,
+  .highlight-box2,
+  .highlight-box3 {
+    width: 400px;
+    border-radius: 60px;
+  }
+}
+
+.graphyear {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+}
