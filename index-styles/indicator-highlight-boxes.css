@@ -229,3 +229,9 @@ e.g. intro Text is absolute and the image is relative, therefore the text is stu
     border-radius: 60px;
   }
 }
+
+.graphyear {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+}

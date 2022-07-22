@@ -243,50 +243,24 @@ hr {
   /* adjusting things for different screen widths */
   .intro {
     /*picture and overlay text*/
-    background-color: black;
     height: 500px;
-    margin-bottom: 30px;
-    margin-left: -20px;
-    margin-right: -10px;
-
-    position: relative;
-    display: flex;
   }
   /*text that says BoostNB Dashboard*/
   .intro h1 {
-    display: block;
-    position: absolute;
     /*position within the image*/
     top: 75px;
     left: 45px;
-    /*text colour*/
-    color: white;
     font-size: 42px;
-    font-weight: 600;
   }
 
   /*Text describing what boostNB is*/
   .intro p {
-    display: block;
-    position: absolute;
     /*position within the image*/
     top: 150px;
     left: 10%;
     /*text colour*/
-    color: white;
-    display: grid;
     grid-template-columns: 2fr 1fr;
     font-size: 20px;
-  }
-
-  .credits {
-    display: block;
-    position: absolute;
-    /*position within the image*/
-    bottom: 5px;
-    right: 5px;
-    color: white;
-    font-size: 8px;
   }
 
   .highlights {
@@ -317,38 +291,23 @@ hr {
   /* adjusting things fir appropriate screen width */
   .intro {
     /*picture and overlay text*/
-    background-color: black;
     height: 450px;
     margin-bottom: 60px;
     margin-left: -20px;
     margin-right: -10px;
-
-    position: relative;
-    display: flex;
   }
   /*text that says BoostNB Dashboard*/
   .intro h1 {
-    display: block;
-    position: absolute;
-    /*position within the image*/
     top: 35px;
     left: 60px;
+    font-size: 36px;
+    line-height: 100%;
     /*text colour*/
     color: white;
-    font-size: 42px;
-    font-weight: 600;
   }
 
   /*Text describing what boostNB is*/
   .intro p {
-    display: block;
-    position: absolute;
-    /*position within the image*/
-    top: 200px;
-    left: 10%;
-    /*text colour*/
-    color: white;
-    display: grid;
     grid-template-columns: 8fr 1fr;
     font-size: 18px;
     line-height: 110%;
