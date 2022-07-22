@@ -323,6 +323,6 @@ this is the sidebar hamburger menu styling code */
 
   /* Show the dropdown menu on hover */
   .sidebar-dropdown:hover .reports-content2 {
-    display: block;
+    display: inline-block;
   }
 }
