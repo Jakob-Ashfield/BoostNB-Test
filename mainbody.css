@@ -1,0 +1,360 @@
+/*general notes:
+If you don't understand something look up "css/html" + whatever you don't understand.
+
+search css display types to learn about display: _________. 
+As well search 'css position types to learn about position: ________.
+Position: absolute is 'stuck' within what 'relative' position on the page it is nested in, 
+e.g. intro Text is absolute and the image is relative, therefore the text is stuck somewhere relative to the image boundaries*/
+.intro {
+  /*picture and overlay text*/
+  background-color: black;
+  height: 515px;
+  margin-bottom: 30px;
+  margin-left: -20px;
+  margin-right: -10px;
+
+  position: relative;
+  display: flex;
+}
+/*This is the image*/
+.intro img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  opacity: 0.5;
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+/*text that says BoostNB Dashboard*/
+.intro h1 {
+  display: block;
+  position: absolute;
+  /*position within the image*/
+  top: 100px;
+  left: 75px;
+  /*text colour*/
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+/*Text describing what boostNB is*/
+.intro p {
+  display: block;
+  position: absolute;
+  /*position within the image*/
+  top: 200px;
+  left: 10%;
+  /*text colour*/
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 24px;
+}
+
+.credits {
+  display: block;
+  position: absolute;
+  /*position within the image*/
+  bottom: 5px;
+  right: 5px;
+  color: white;
+  font-size: 8px;
+}
+/* legend format */
+.legend {
+  text-align: center;
+}
+.legend #one {
+  color: darkgreen;
+  font-weight: 500;
+}
+.legend #two {
+  color: rgb(136, 136, 0);
+  font-weight: 500;
+}
+.legend #three {
+  color: darkred;
+  font-weight: 500;
+}
+
+.legend #four {
+  color: grey;
+  font-weight: 500;
+}
+/* horizontal line format */
+hr {
+  height: 6px;
+}
+/* highlight format */
+.highlights {
+  display: grid;
+  row-gap: 3vw;
+}
+/* gdp box 1 colour */
+.gdp .highlight-box1 {
+  background-color: rgb(136, 136, 0);
+}
+/* box 2 and 3 colour */
+.gdp .highlight-box2,
+.gdp .highlight-box3 {
+  background-color: darkgreen;
+}
+
+/*all are same as gdp*/
+
+.population .highlight-box1,
+.population .highlight-box2 {
+  background-color: darkgreen;
+}
+.population .highlight-box3 {
+  background-color: grey;
+}
+
+.trade .highlight-box1,
+.trade .highlight-box2,
+.trade .highlight-box3 {
+  background-color: darkred;
+}
+
+.natural-resources .highlight-box1 {
+  background-color: rgb(136, 136, 0);
+}
+.natural-resources .highlight-box2 {
+  background-color: darkred;
+}
+.natural-resources .highlight-box3 {
+  background-color: darkgreen;
+}
+
+.investment .highlight-box1,
+.investment .highlight-box3 {
+  background-color: darkred;
+}
+.investment .highlight-box2 {
+  background-color: grey;
+}
+
+.labour .highlight-box1,
+.labour .highlight-box3 {
+  background-color: darkred;
+}
+.labour .highlight-box2 {
+  background-color: grey;
+}
+
+.social-environmental .highlight-box1,
+.social-environmental .highlight-box3 {
+  background-color: darkgreen;
+}
+.social-environmental .highlight-box2 {
+  background-color: grey;
+}
+
+/* general styles for all highlight sections */
+.gdp,
+.population,
+.trade,
+.natural-resources,
+.investment,
+.labour,
+.social-environmental {
+  /*height of each section*/
+  height: 700px;
+  min-height: 700px;
+
+  /*snap scrolling is not hidden by header*/
+  scroll-margin-top: 140px;
+
+  max-height: 750px;
+
+  color: rgba(72, 130, 164, 1);
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+/* link colour unset */
+.reports a {
+  color: unset;
+}
+/* non-visual format */
+.reports {
+  text-align: center;
+  margin: 0 10vw;
+  padding-top: 10vh;
+}
+
+.reports p {
+  display: inline-block;
+  font-weight: 500;
+}
+
+.reports #one {
+  color: forestgreen;
+}
+.reports #two {
+  color: rgb(136, 136, 0);
+}
+.reports #three {
+  color: darkred;
+}
+.reports #four {
+  color: rgb(97, 97, 97);
+}
+.reports #five {
+  color: black;
+}
+
+.footer {
+  background-color: white;
+
+  height: 200px;
+  /*pushes content down 50px*/
+  padding-top: 50px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: inline-block;
+
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.footer img {
+  width: 60px;
+}
+
+.footer p {
+  margin-left: 20px;
+  display: block;
+  font-weight: 600;
+}
+@media screen and (max-width: 1280px) {
+  /* adjusting things for different screen widths */
+  .intro {
+    /*picture and overlay text*/
+    height: 500px;
+  }
+  /*text that says BoostNB Dashboard*/
+  .intro h1 {
+    /*position within the image*/
+    top: 75px;
+    left: 45px;
+    font-size: 42px;
+  }
+
+  /*Text describing what boostNB is*/
+  .intro p {
+    /*position within the image*/
+    top: 150px;
+    left: 10%;
+    /*text colour*/
+    grid-template-columns: 2fr 1fr;
+    font-size: 20px;
+  }
+
+  .highlights {
+    display: grid;
+
+    row-gap: 2em;
+  }
+  .gdp,
+  .population,
+  .trade,
+  .natural-resources,
+  .investment,
+  .labour,
+  .social-environmental {
+    /*height of each section*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1fr 8fr;
+    height: 1300px;
+    min-height: 1300px;
+    justify-content: space-around;
+    margin-bottom: 5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* adjusting things fir appropriate screen width */
+  .intro {
+    /*picture and overlay text*/
+    height: 450px;
+    margin-bottom: 60px;
+    margin-left: -20px;
+    margin-right: -10px;
+  }
+  /*text that says BoostNB Dashboard*/
+  .intro h1 {
+    top: 35px;
+    left: 60px;
+    font-size: 36px;
+    line-height: 100%;
+    /*text colour*/
+    color: white;
+  }
+
+  /*Text describing what boostNB is*/
+  .intro p {
+    grid-template-columns: 8fr 1fr;
+    font-size: 18px;
+    line-height: 110%;
+  }
+
+  .credits {
+    display: block;
+    position: absolute;
+    /*position within the image*/
+    bottom: 5px;
+    right: 5px;
+    color: white;
+    font-size: 8px;
+  }
+
+  .highlights {
+    display: grid;
+    row-gap: 2em;
+  }
+  .gdp,
+  .population,
+  .trade,
+  .natural-resources,
+  .investment,
+  .labour,
+  .social-environmental {
+    /*height of each section*/
+    /*snap scrolling is not hidden by header*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1fr 12fr;
+    height: 1900px;
+    min-height: 1900px;
+    margin-bottom: 6em;
+  }
+
+  .legend {
+    margin-bottom: 60px;
+  }
+
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footer img {
+    width: 45px;
+  }
+}
