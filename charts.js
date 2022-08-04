@@ -798,6 +798,9 @@ const config6 = {
         ticks: {
           autoSkip: true,
           maxTicksLimit: 10,
+          callback: function (value, index, ticks) {
+            return "$ " + value
+          }
         },
       },
     },
